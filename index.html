@@ -1438,7 +1438,7 @@
 	<!-- Recent Winners Area End -->
 
 	<!-- Footer Area Start -->
-	<!-- <footer class="footer" id="footer">
+	<footer class="footer" id="footer">
 		<div class="subscribe-area">
 			<div class="container">
 				<div class="row">
@@ -1468,7 +1468,7 @@
 									</div>
 									<div class="col-lg-3 d-flex align-self-center">
 										<div class="button-area">
-											<a href="#" class="mybtn1"
+											<a href="javascript:void(0);" class="mybtn1"
 												id="checknow" onclick="checkNFTDrop()">Check Now
 												<span><i class="fas fa-paper-plane"></i></span>
 											</a>
@@ -1481,7 +1481,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container">
+		<!-- <div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3">
 					<div class="footer-widget info-link-widget">
@@ -1644,19 +1644,19 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="copy-bg">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-5">
 						<div class="left-area">
-							<p>Copyright © 2019.All Rights Reserved By <a href="#">Dooplo</a>
+							<p>Copyright © 2021.All Rights Reserved <!-- By <a href="#">Dooplo</a> -->
 							</p>
 						</div>
 					</div>
 					<div class="col-lg-7">
 						<ul class="copright-area-links">
-							<li>
+							<!-- <li>
 								<a href="#">Terms Of Use</a>
 							</li>
 							<li>
@@ -1670,13 +1670,23 @@
 							</li>
 							<li>
 								<a href="#">Help Cente</a>
-							</li>
+							</li> -->
+							<li><a href="https://twitter.com/RageFanSocial" target="blank"><em class="fab fa-twitter"></em></a></li>
+                            <li><a href="https://medium.com/@ragefan" target="blank"><em class="fab fa-medium-m"></em></a></li>
+                            <li><a href="https://t.me/rage_fan" target="blank"><em class="fas fa-paper-plane"></em></a></li>
 						</ul>
+						<!-- <ul class="social-links">
+
+                            <li><a href="https://twitter.com/RageFanSocial" target="blank"><em class="fab fa-twitter"></em></a></li>
+                            <li><a href="https://medium.com/@ragefan" target="blank"><em class="fab fa-medium-m"></em></a></li>
+                            <li><a href="https://t.me/rage_fan" target="blank"><em class="fas fa-paper-plane"></em></a></li>
+
+                        </ul> -->
 					</div>
 				</div>
 			</div>
 		</div>
-	</footer> -->
+	</footer>
 	<!-- Footer Area End -->
 
 	<!-- Back to Top Start -->
@@ -1821,13 +1831,12 @@
 					</div>
 					<div class="form-footer">
 						<p>Join our Telegram community and show some love!
-							<a href="#">Telegram link<i class="fas fa-angle-double-right"></i></a>
+							<a href="https://t.me/rage_fan">Telegram link<i class="fas fa-angle-double-right"></i></a>
 						</p>
 						<p>Retweet this to make your followers a little jealous of you
 							<a href="#">Retweet Link<i class="fas fa-angle-double-right"></i></a>
 						</p>
 					</div>
-					<a href="#" data-toggle="modal" data-target="#error-popup">error message</a>
 				</div>
 			</div>
 		</div>
@@ -1850,7 +1859,7 @@
 					</div>
 					<div class="form-footer">
 						<p>Join our Telegram community and show some love!
-							<a href="#">Telegram link<i class="fas fa-angle-double-right"></i></a>
+							<a href="https://t.me/rage_fan">Telegram link<i class="fas fa-angle-double-right"></i></a>
 						</p>
 						<p>Retweet this to make your followers a little jealous of you
 							<a href="#">Retweet Link<i class="fas fa-angle-double-right"></i></a>
@@ -1910,57 +1919,28 @@
 		function checkNFTDrop() {
 			let dropAddress = document.getElementById("address").value;
 			console.log("Drop Address is", dropAddress);
-			db.collection("searchedAddress").add({
-				address: dropAddress,
-				time: new Date()
-			})
-			db.collection("tokenDrop").where('HolderAddress', '==', dropAddress).get().then((snapshot) => {
-				if (snapshot.docs[0]) {
-					// alert("You Have got NFT");
+			if (dropAddress != '') {
+				db.collection("searchedAddress").add({
+					address: dropAddress,
+					time: new Date()
+				})
+				db.collection("tokenDrop").where('HolderAddress', '==', dropAddress).get().then((snapshot) => {
+					if (snapshot.docs[0]) {
+						// alert("You Have got NFT");
 
-					var success = document.getElementById("success-popup");
-  					success.classList.add("show");
-
-
-
-var successPop = document.getElementById("success-popup");
-var errorPop = document.getElementById("error-popup");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+						$('#success-popup').modal('show');
 
 
-
-
-
-
-					document.getElementById("nft-date").innerHTML = snapshot.docs[0].data().Date;
-					return
-				} else {
-					alert("Try luck next time");
-					return
-				}
-			})
+						document.getElementById("nft-date").innerHTML = snapshot.docs[0].data().Date;
+						return
+					} else {
+						// alert("Try luck next time");
+						$('#error-popup').modal('show');
+						return
+					}
+				})
+			}
+				
 
 		}
 	</script>
