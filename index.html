@@ -73,6 +73,12 @@
 		.single-work .win-img {
 			margin-top: -45px;
 		}
+		.tournament-time-box img {
+			cursor: pointer;
+		}
+		#french-popup .modal-content, #nba-popup .modal-content, #euro-popup .modal-content, #olympics-popup .modal-content {
+			background-color: #000080;
+		}
 	</style>
 </head>
 
@@ -340,7 +346,8 @@
 					<h4 class="title">
 						NFT
 					</h4>
-					<a href="https://nftstake.rage.fan/" class="mybtn1">Launch Stake Farm</a>
+					<a href="https://nftstake.rage.fan/" class="mybtn1">Launch Polygon Farm</a>
+					<a href="https://nftstake.rage.fan/bsc/index.html" class="mybtn1 ml-3">Launch BSC Farm</a>
 					<!-- <ul class="breadcrumb-list">
 						<li>
 							<a href="index.html">
@@ -1342,7 +1349,8 @@
 							might want to use a Roger Federer NFT for Wimbledon. And keep the Nadal NFT for French Open.
 						</p>
 						<p class="text">NFTs now available for Football (Soccer), Basketball, and Tennis. </p>
-						<a href="https://nftstake.rage.fan/" class="mybtn1">Launch Stake Farm</a>
+						<a href="https://nftstake.rage.fan/" class="mybtn1">Launch Polygon Farm</a>
+						<a href="https://nftstake.rage.fan/bsc/index.html" class="mybtn1 ml-3">Launch BSC Farm</a>
 					</div>
 				</div>
 			</div>
@@ -1387,7 +1395,7 @@
 							<div class="clock"></div>
 						</div> -->
 						<div class="image-area">
-							<img src="assets/images/tournament/t1.jpg">
+							<img src="assets/images/tournament/t1.jpg" data-toggle="modal" data-target="#french-popup">
 						</div>
 					</div>
 				</div>
@@ -1405,7 +1413,7 @@
 							</p>
 						</div>
 						<div class="image-area">
-							<img src="assets/images/tournament/t2.png">
+							<img src="assets/images/tournament/t2.png" data-toggle="modal" data-target="#nba-popup">
 						</div>
 					</div>
 				</div>
@@ -1423,7 +1431,7 @@
 							</p>
 						</div>
 						<div class="image-area">
-							<img src="assets/images/tournament/t3.png">
+							<img src="assets/images/tournament/t3.png" data-toggle="modal" data-target="#euro-popup">
 						</div>
 						<!-- <div class="timer-area">
 							<h4 class="title">
@@ -1447,7 +1455,7 @@
 							</p>
 						</div>
 						<div class="image-area">
-							<img src="assets/images/tournament/t4.png">
+							<img src="assets/images/tournament/t4.png" data-toggle="modal" data-target="#olympics-popup">
 						</div>
 						<!-- <div class="timer-area">
 							<h4 class="title">
@@ -1881,6 +1889,109 @@
 	</div>
 	<!-- Login Area End -->
 
+	<div class="modal fade login-modal" id="french-popup" tabindex="-1" role="dialog" aria-labelledby="french-popup"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<div class="modal-body">
+					<div class="header-area">
+						<h4 class="title">French Open</h4>
+						<p class="sub-title">2021</p>
+					</div>
+					<div class="form-area">
+						<h4>Rules</h4>
+						<p>Mint your NFT! </p>
+						<p>Enter your wallet details that holds the NFT into the form below</p>
+						<p>Win $Rage when the player wins on the court</p>
+						<p>$Rage will be deposited into the same wallet at the end of the tournament</p>
+					</div>
+					<div class="form-footer">
+						<a class="btn btn-danger mb-3" href="https://docs.google.com/forms/u/2/d/e/1FAIpQLSdCG9MTeIeVd9baZ0jBzNT-PN2ISu3xezq2eNr5Hb-Ivyq3DA/viewform">Enter Contest</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade login-modal" id="nba-popup" tabindex="-1" role="dialog" aria-labelledby="nba-popup"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<div class="modal-body">
+					<div class="header-area">
+						<h4 class="title">French Open</h4>
+						<p class="sub-title">2021</p>
+					</div>
+					<div class="form-area">
+						<h4>Rules</h4>
+						<p>Mint your NFT! </p>
+						<p>Enter your wallet details that holds the NFT into the form below</p>
+						<p>Win $Rage when the player wins on the court</p>
+						<p>$Rage will be deposited into the same wallet at the end of the tournament</p>
+					</div>
+					<div class="form-footer">
+						<a class="btn btn-danger mb-3" href="https://forms.gle/6Z24A4AWFWAGJMGE6">Enter Contest</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade login-modal" id="euro-popup" tabindex="-1" role="dialog" aria-labelledby="euro-popup"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<div class="modal-body">
+					<div class="header-area">
+						<h4 class="title">French Open</h4>
+						<p class="sub-title">2021</p>
+					</div>
+					<div class="form-area">
+						<h4>Rules</h4>
+						<p>Mint your NFT! </p>
+						<p>Enter your wallet details that holds the NFT into the form below</p>
+						<p>Win $Rage when the player wins on the court</p>
+						<p>$Rage will be deposited into the same wallet at the end of the tournament</p>
+					</div>
+					<div class="form-footer">
+						<a class="btn btn-danger mb-3" href="https://forms.gle/AA6uqpr7XtKsqEwp6">Enter Contest</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade login-modal" id="olympics-popup" tabindex="-1" role="dialog" aria-labelledby="olympics-popup"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<div class="modal-body">
+					<div class="header-area">
+						<h4 class="title">French Open</h4>
+						<p class="sub-title">2021</p>
+					</div>
+					<div class="form-area">
+						<h4>Rules</h4>
+						<p>Mint your NFT! </p>
+						<p>Enter your wallet details that holds the NFT into the form below</p>
+						<p>Win $Rage when the player wins on the court</p>
+						<p>$Rage will be deposited into the same wallet at the end of the tournament</p>
+					</div>
+					<div class="form-footer">
+						<!-- <a class="btn btn-danger mb-3" href="https://forms.gle/6Z24A4AWFWAGJMGE6">Read More</a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- SignIn Area Start -->
 	<div class="modal fade login-modal sign-in" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin"
 		aria-hidden="true">
@@ -1969,6 +2080,30 @@
 		</div>
 	</div>
 
+	<div class="modal fade login-modal error-popup-modal" id="error-popup" tabindex="-1" role="dialog"
+		aria-labelledby="login" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<div class="modal-body">
+					<div class="logo-area">
+						<img src="https://rage.fan/images/logo/RF-logo-dark.svg" alt=""
+							style="width: 90px; margin-top: -30px;" class="logo">
+					</div>
+					<div class="header-area">
+						<h4 class="title">Shoot!</h4>
+						<p class="sub-title">The luck Gods were not in your favor today!</p>
+					</div>
+					<div class="form-footer">
+						<p>Join our <a href="https://t.me/rage_fan">Telegram community</a> and show some love!</p>
+						<p><a href="https://twitter.com/intent/retweet?tweet_id=1400325844678049792">Retweet this</a> to increase your chances for a surprise Airdrop
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="modal fade login-modal error-popup-modal" id="error-popup" tabindex="-1" role="dialog"
 		aria-labelledby="login" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
